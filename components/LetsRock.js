@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, Image, View, StyleSheet } from 'react-native'
+import { Text, Image, View, StyleSheet, Platform } from 'react-native'
 
 export default class LetsRock extends Component {
   render() {
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   },
   card: {
     borderRadius: 10,
-    backgroundColor: '#fff',
+    backgroundColor: (Platform.OS === 'ios') ? '#fff' : '#eee',
     height: 'auto',
     width: 300,
     justifyContent: 'space-around',
